@@ -37,8 +37,8 @@ def main():
             bbox = obj.get('bbox', [])
             xmin = (int)(bbox[0])
             ymin = (int)(bbox[1])
-            xmax = (int)(bbox[2] + bbox[0])
-            ymax = (int)(bbox[3] + bbox[1])
+            xmax = (int)(bbox[2])
+            ymax = (int)(bbox[3])
             ann = [category, 1.0, xmin, ymin, xmax, ymax]
             if not(xmin-xmax==0 or ymin-ymax==0):
                 anns.append(ann)
